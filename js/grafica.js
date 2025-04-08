@@ -2,7 +2,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     const ctx = document.getElementById('mostrarGrafica').getContext('2d');
     
-    // Datos para mostrar y crear la gráfica
+    // Datos para mostrar y crear la gráfica e darle los estilos
     const chart = new Chart(ctx, {
         type: 'line',
         data: {
