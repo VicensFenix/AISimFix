@@ -1,7 +1,13 @@
+/* ESTILOS GENERALES DE LA WEB */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    --bg-color-navbar: #0734a4;
+    --link-color: #fff;
+    --link-color-after: #2ecc71;
+    --color-maintitle: linear-gradient(to right, #3498db, #2ecc71);
+    --textshadow-maintitle: 0 0 10px rgba(46, 204, 113, 0.3);
 }
 
 html, body {
@@ -22,8 +28,8 @@ html, body {
 
 /* ===== ESTILOS GENERALES ===== */
 .navbar {
-    background-color: #2c3e50;
-    color: white;
+    background-color: var(--bg-color-navbar);
+    color: var(--link-color);
     padding: 0.8rem 0; /* Padding vertical solamente */
     position: fixed;
     width: 100%;
@@ -65,7 +71,7 @@ html, body {
     font-size: 1.6rem;
     margin: 0;
     font-weight: 600;
-    background: linear-gradient(to right, #3498db, #2ecc71);
+    background: var(--color-maintitle);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -73,7 +79,7 @@ html, body {
 }
 
 .maintitle:hover {
-    text-shadow: 0 0 10px rgba(46, 204, 113, 0.3);
+    text-shadow: var(--textshadow-maintitle);
 }
 
 /* ===== BOTÓN HAMBURGUESA ===== */
@@ -81,7 +87,7 @@ html, body {
     display: none;
     background: none;
     border: none;
-    color: white;
+    color: var(--link-color);
     font-size: 1.8rem;
     cursor: pointer;
     padding: 0.5rem;
@@ -110,7 +116,7 @@ html, body {
 }
 
 .link-nav {
-    color: white;
+    color: var(--link-color);
     text-decoration: none;
     font-weight: 500;
     padding: 0.5rem 0;
