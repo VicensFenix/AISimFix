@@ -13,27 +13,32 @@
     <!-- Sección del Navbar -->
     <nav class="navbar">
         <div class="content-menu">
+            <!-- Botón hamburguesa (solo visible en móvil) -->
             <button class="menu-toggle">
                 <span class="icon-menu">☰</span>
                 <span class="icon-close">✖</span>
             </button>
-            <h1 class="maintitle">AISimFix</h1>
-            <!-- Logo -->
-            <img class="logo-nav" src="/assets/logo.png" alt="logo de la app de simulación de mantenimientos ">
-            <!-- Contenedor de los enlazes -->
+        
+            <!-- Grupo logo + título (siempre juntos) -->
+            <div class="navbar-brand">
+                <img class="logo-nav" src="/assets/logo.png" alt="logo de la app de simulación de mantenimientos">
+                <h1 class="maintitle">AISimFix</h1>
+            </div>
+        
+            <!-- Menú de navegación -->
             <div class="container-nav">
                 <ul class="list-nav">
                     <li class="item-nav">
                         <a class="link-nav" href="index.html#inicio">Inicio</a>
                     </li>
                     <li class="item-nav">
-                        <a class="link-nav" href="index.html#información">¿De que trata?</a>
+                        <a class="link-nav" href="index.html#información">¿De qué trata?</a>
                     </li>
                     <li class="item-nav">
-                        <a class="link-nav" href="index.html#grafica">Graficas</a>
+                        <a class="link-nav" href="index.html#grafica">Gráficas</a>
                     </li>
                     <li class="item-nav">
-                        <a class="link-nav" href="#descargar">Descargar</a>
+                        <a class="link-nav" href="descargas.html#descargar">Descargar</a>
                     </li>
                 </ul>
             </div>
@@ -61,11 +66,14 @@
             <hr>
             <address class="address-foot">
                 <p class="text-foot">
-                    © 2025 [Nombre de la Empresa o Desarrollador]. Todos los derechos reservados
+                    © 2025 <span class="span-foot">AISimFix</span>. Todos los derechos reservados. Todos los derechos reservados
                 </p>
             </address>
         </div>
     </footer>
+
+    <!-- Scriopts de los js -->
+    <script src="/js/menu_toggle.js"></script>
 
 </body>
 </html>

@@ -7,7 +7,10 @@
     --link-color: #fff;
     --link-color-after: #2ecc71;
     --color-maintitle: linear-gradient(to right, #3498db, #2ecc71);
+    --color-span-oganization: linear-gradient(to right, #3498db, #2ecc71);
     --textshadow-maintitle: 0 0 10px rgba(46, 204, 113, 0.3);
+    --bg-color-foot: #1c1c1e;
+    --line-color: #ddd;
 }
 
 html, body {
@@ -601,7 +604,7 @@ html, body {
 
 /* Estilo base del footer */
 .foot {
-    background-color: #1c1c1e;
+    background-color: var(--bg-color-foot);
     color: #ffffff;
     padding: 20px 0;
     text-align: center;
@@ -617,9 +620,9 @@ html, body {
 }
 
 /* Línea divisoria */
-.content-foot hr {
+.line {
     border: none;
-    border-top: 1px solid #444;
+    border-top: 1px solid var(--line-color);
     margin-bottom: 15px;
 }
 
@@ -632,6 +635,11 @@ html, body {
 .text-foot {
     font-size: 16px;
     color: #ccc;
+}
+
+/* Texto resaltado del footer */
+.span-foot {
+    color: var(linear-gradient(to right, #3498db, #2ecc71));
 }
 
 /* Responsive */
