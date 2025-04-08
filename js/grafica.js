@@ -1,8 +1,8 @@
-// grafica.js
+// Manipula del DOM para crear la tabla
 document.addEventListener('DOMContentLoaded', function() {
     const ctx = document.getElementById('mostrarGrafica').getContext('2d');
     
-    // Datos basados en la imagen proporcionada
+    // Datos para mostrar y crear la gráfica
     const chart = new Chart(ctx, {
         type: 'line',
         data: {
