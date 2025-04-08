@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AISimFix</title>
+    <link rel="shortcut icon" href="/assets/app.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/styles/index.css">
+</head>
+<body>
+    
+    <!-- Sección del Navbar -->
+    <nav class="navbar">
+        <div class="content-menu">
+            <!-- Botón hamburguesa (solo visible en móvil) -->
+            <button class="menu-toggle">
+                <span class="icon-menu">☰</span>
+                <span class="icon-close">✖</span>
+            </button>
+        
+            <!-- Grupo logo + título (siempre juntos) -->
+            <div class="navbar-brand">
+                <img class="logo-nav" src="/assets/logo.png" alt="logo de la app de simulación de mantenimientos">
+                <h1 class="maintitle">AISimFix</h1>
+            </div>
+        
+            <!-- Menú de navegación -->
+            <div class="container-nav">
+                <ul class="list-nav">
+                    <li class="item-nav">
+                        <a class="link-nav" href="index.html#inicio">Inicio</a>
+                    </li>
+                    <li class="item-nav">
+                        <a class="link-nav" href="index.html#información">¿De qué trata?</a>
+                    </li>
+                    <li class="item-nav">
+                        <a class="link-nav" href="index.html#grafica">Gráficas</a>
+                    </li>
+                    <li class="item-nav">
+                        <a class="link-nav" href="descargas.html#descargar">Descargar</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sección principal -->
+    <main class="main">
+
+        <!-- Sección Inicio -->
+        <section class="section-start" id="inicio">
+            <div class="container_start">
+                <h2 class="subtitle">Simulador Para Tu empresa de Mantenimiento</h2>
+
+                <!-- Contenedor del carrusel -->
+                <div class="carousel">
+                    <div class="carousel-track">
+                        <div class="content_card">
+                            <img class="img_card" src="/assets/descripcion.png" alt="Descripción">
+                            <p class="text_card">Ve simulando tus costos</p>
+                        </div>
+                        <div class="content_card">
+                            <img class="img_card" src="/assets/empresarial.jpeg" alt="Empresarial">
+                            <p class="text_card">¿Cómo usarlo de manera empresarial?</p>
+                        </div>
+                        <div class="content_card">
+                            <img class="img_card" src="/assets/beta.png" alt="Beta">
+                            <p class="text_card">Ya está disponible la beta</p>
+                        </div>
+                    </div>
+
+                    <!-- Botones -->
+                    <button class="btn_action left" id="prev">&#10094;</button>
+                    <button class="btn_action right" id="next">&#10095;</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contiene el articulo informativo de la WEB -->
+        <article class="article" id="informacion">
+            <!-- Contenedor de la sección informativa -->
+            <div class="content-article">
+                <h2 class="subtitle">¿Cómo darle un uso a este simulador?</h2>
+                <!-- Contendor en forma de noticias -->
+                <div class="card-article">
+                    <h3 class="mintitle">Configuración</h3>
+                    <div class="imgcontent-article">
+                        <img class="img-article" src="/assets/mindescription.png" alt="Describe tu simulación">
+                    </div>
+                    <p class="text-article">
+                        En esta sección inicial podrás ingresar los datos necesarios para personalizar tu simulación, como el número de elementos a simular, parámetros clave como tiempo, variables de entrada o condiciones iniciales. Es fundamental que completes este apartado con la mayor precisión posible para obtener resultados más cercanos a tu objetivo o escenario real. También puedes configurar el tipo de simulación, si es lineal, aleatoria o basada en escenarios.
+                    </p>
+                </div>
+
+                <div class="card-article">
+                    <h3 class="mintitle">Simulación</h3>
+                    <div class="imgcontent-article">
+                        <img class="img-article" src="/assets/dias_simulados.png" alt="Días a simular">
+                    </div>
+                    <p class="text-article">
+                        Aquí definirás cuántos días deseas simular, lo cual afectará directamente la duración de la proyección. Esta sección permite establecer un periodo de análisis, ya sea corto o largo plazo, y ejecuta los cálculos necesarios para representar cómo evolucionarán tus datos a lo largo del tiempo. Además, puedes observar cómo las condiciones iniciales impactan los resultados a medida que avanzan los días simulados.
+                    </p>
+                </div>
+
+                <div class="card-article">
+                    <h3 class="mintitle">Resultados</h3>
+                    <div class="imgcontent-article">
+                        <img class="img-article" src="/assets/grafica.png" alt="Grafica los días simulados">
+                    </div>
+                    <p class="text-article">
+                        Una vez finalizada la simulación, esta sección te mostrará los resultados de forma gráfica y ordenada. Podrás visualizar tendencias, identificar comportamientos relevantes y comparar diferentes escenarios si es que has ejecutado múltiples simulaciones. Las gráficas interactivas permiten interpretar mejor los datos y tomar decisiones informadas basadas en los patrones que observes.
+                    </p>
+                </div>
+
+            </div>
+        </article>
+
+        <!-- Sección para visualizar la gráfica -->
+        <section class="section-graph" id="grafica">
+            <!-- Contenedor de la gráfica -->
+            <div class="content_graph">
+                <h2 class="subtitle">Gráfica de Coordenadas X/Y</h2>
+                <!-- Contenedor de la descripción -->
+                <address class="address-graph">
+                    <p class="text-graph">
+                        Este sotfware te mostrara por medio de una estadística, a travez de una somulación la probabilidad de los costos que tendrias al contratar y pagas a tus tecnicos, las herramientas que usarias y la mano de obra.
+                    </p>
+                </address>
+                <canvas class="canvas-graph" id="mostrarGrafica"></canvas>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Pie de página -->
+    <footer class="foot">
+        <div class="content-foot">
+            <hr>
+            <address class="address-foot">
+                <p class="text-foot">
+                    © 2025 [Nombre de la Empresa o Desarrollador]. Todos los derechos reservados
+                </p>
+            </address>
+        </div>
+    </footer>
+
+    <!-- Rutas externas -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Parte de los Scripts: JS -->
+    <script src="/js/menu_toggle.js"></script>
+    <script src="/js/grafica.js"></script>
+    <script src="/js/carousel.js"></script>
+
+</body>
+</html>

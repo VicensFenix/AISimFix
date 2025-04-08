@@ -1,0 +1,648 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Contenedor del principál */
+.main {
+    padding-top: 120px;
+    flex: 1;
+}
+
+/* Sección del Navbar */
+
+/* ===== ESTILOS GENERALES ===== */
+.navbar {
+    background-color: #2c3e50;
+    color: white;
+    padding: 0.8rem 0; /* Padding vertical solamente */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0; /* Aseguramos que empiece desde el borde */
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Contenedor principal - clave para el centrado */
+.content-menu {
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto; /* Centrado pero sin espacios laterales */
+    padding: 0 1rem; /* Padding interno horizontal */
+    gap: 1.5rem;
+}
+
+/* ===== GRUPO LOGO + TÍTULO ===== */
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-right: auto; /* Empuja el menú a la derecha */
+}
+
+.logo-nav {
+    height: 42px;
+    width: auto;
+    transition: transform 0.3s;
+}
+
+.logo-nav:hover {
+    transform: scale(1.05);
+}
+
+.maintitle {
+    font-size: 1.6rem;
+    margin: 0;
+    font-weight: 600;
+    background: linear-gradient(to right, #3498db, #2ecc71);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    transition: all 0.3s;
+}
+
+.maintitle:hover {
+    text-shadow: 0 0 10px rgba(46, 204, 113, 0.3);
+}
+
+/* ===== BOTÓN HAMBURGUESA ===== */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.8rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    transition: transform 0.3s;
+}
+
+.menu-toggle:hover {
+    transform: scale(1.1);
+}
+
+.icon-close {
+    display: none;
+}
+
+/* ===== MENÚ DE NAVEGACIÓN ===== */
+.container-nav {
+    display: flex;
+}
+
+.list-nav {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 1.8rem;
+}
+
+.link-nav {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 0;
+    position: relative;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+.link-nav::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #2ecc71;
+    transition: width 0.3s;
+}
+
+.link-nav:hover {
+    color: #2ecc71;
+}
+
+.link-nav:hover::after {
+    width: 100%;
+}
+
+/* ===== RESPONSIVE (MENÚ HAMBURGUESA) ===== */
+@media (max-width: 768px) {
+    .content-menu {
+        flex-wrap: wrap;
+        gap: 1rem;
+        padding: 0.5rem 0;
+    }
+    
+    .menu-toggle {
+        display: block;
+        order: -1;
+        margin-right: 0.5rem;
+    }
+    
+    .navbar-brand {
+        order: 1;
+        flex: 1;
+        min-width: 0;
+    }
+    
+    .maintitle {
+        font-size: 1.4rem;
+    }
+    
+    .logo-nav {
+        height: 36px;
+    }
+    
+    .container-nav {
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease-out;
+        order: 3;
+    }
+    
+    .container-nav.active {
+        max-height: 500px;
+    }
+    
+    .list-nav {
+        flex-direction: column;
+        gap: 0;
+        padding: 1rem 0 0.5rem;
+    }
+    
+    .item-nav {
+        padding: 0.8rem 1rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .link-nav {
+        font-size: 1.05rem;
+    }
+    
+    /* Efectos para el botón hamburguesa */
+    .menu-toggle.active .icon-menu {
+        display: none;
+    }
+    
+    .menu-toggle.active .icon-close {
+        display: inline;
+    }
+    
+    .menu-toggle:not(.active) .icon-close {
+        display: none;
+    }
+}
+
+/* ===== AJUSTES PARA PANTALLAS MUY PEQUEÑAS ===== */
+@media (max-width: 480px) {
+    .navbar {
+        padding: 0.6rem 0.8rem;
+    }
+    
+    .maintitle {
+        font-size: 1.2rem;
+    }
+    
+    .logo-nav {
+        height: 32px;
+    }
+    
+    .menu-toggle {
+        font-size: 1.6rem;
+    }
+}
+
+
+/* Sección de Inicio */
+.section-start {
+    padding: 2rem 0;
+    background-color: #f8f9fa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container_start {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.subtitle {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Estilos del carrusel - Tamaño base (móvil) */
+.carousel {
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+    max-width: 350px; /* Ancho para una sola card */
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.content_card {
+    min-width: 100%; /* Ocupa todo el ancho del carrusel */
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0; /* Evita que las cards se reduzcan */
+}
+
+.img_card {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-bottom: 1px solid #eee;
+}
+
+.text_card {
+    padding: 1rem;
+    text-align: center;
+    color: #333;
+    font-size: 1.1rem;
+    margin: 0;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.action-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0 1rem 1rem;
+}
+
+.action-buttons a {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 500;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.action-buttons a:hover {
+    background-color: #0056b3;
+}
+
+/* Botones del carrusel */
+.btn_action {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+}
+
+.btn_action:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.left {
+    left: 10px;
+}
+
+.right {
+    right: 10px;
+}
+
+/* Media Queries para pantallas medianas (tablets) */
+@media (min-width: 768px) {
+    .carousel {
+        max-width: 500px; /* Aumenta el ancho del carrusel */
+    }
+    
+    .img_card {
+        height: 250px; /* Aumenta la altura de la imagen */
+    }
+    
+    .text_card {
+        font-size: 1.2rem; /* Aumenta el tamaño del texto */
+        padding: 1.5rem; /* Más padding */
+    }
+    
+    .action-buttons a {
+        padding: 0.6rem 1.2rem; /* Botones más grandes */
+        font-size: 1.1rem;
+    }
+}
+
+/* Media Queries para pantallas grandes (desktop) */
+@media (min-width: 1024px) {
+    .carousel {
+        max-width: 600px; /* Aumenta aún más el ancho del carrusel */
+    }
+    
+    .img_card {
+        height: 300px; /* Aumenta más la altura de la imagen */
+    }
+    
+    .text_card {
+        font-size: 1.3rem; /* Texto aún más grande */
+        padding: 2rem; /* Más padding */
+    }
+    
+    .action-buttons {
+        padding: 0 1.5rem 1.5rem; /* Más espacio alrededor de los botones */
+    }
+    
+    .action-buttons a {
+        padding: 0.7rem 1.5rem;
+        font-size: 1.2rem;
+    }
+}
+
+/* Responsive para móviles pequeños */
+@media (max-width: 480px) {
+    .carousel {
+        max-width: 300px;
+    }
+    
+    .btn_action {
+        width: 30px;
+        height: 30px;
+        font-size: 1rem;
+    }
+}
+
+
+/* Sección del artículo */
+.article {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+}
+
+/* Contenedor general */
+.content-article {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.card-article {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    padding: 30px;
+    margin-bottom: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden; /* evita desbordes de contenido */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-article:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+/* Título dentro de cada card */
+.mintitle {
+    font-size: 1.5rem;
+    color: #005f99;
+    margin-bottom: 15px;
+}
+
+/* Contenedor de la imagen */
+.imgcontent-article {
+    width: 100%;
+    max-width: 300px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+/* Imagen dentro de la card */
+.img-article {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* rellena el contenedor sin deformar */
+    display: block;
+}
+
+
+/* Texto de cada card */
+.text-article {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+/* Responsive: PC y laptop */
+@media (min-width: 1024px) {
+    .content-article {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px;
+        text-align: left;
+    }
+
+    .card-article {
+        padding: 40px;
+    }
+
+    .subtitle {
+        grid-column: 1 / -1;
+        text-align: center;
+    }
+}
+
+/* Responsive: Tablets */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .content-article {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+        text-align: left;
+    }
+
+    .subtitle {
+        grid-column: 1 / -1;
+        text-align: center;
+    }
+}
+
+/* Responsive: Celulares */
+@media (max-width: 767px) {
+    .subtitle {
+        font-size: 1.5rem;
+    }
+
+    .mintitle {
+        font-size: 1.2rem;
+    }
+
+    .text-article {
+        font-size: 0.95rem;
+    }
+
+    .img-article {
+        max-width: 100%;
+        height: 180px;
+    }
+}
+
+
+/* Estilo base para la sección de la gráfica */
+.section-graph {
+    padding: 3rem 1rem;
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.content_graph {
+    max-width: 900px;
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+.address-graph {
+    font-style: normal;
+    margin-bottom: 1.5rem;
+}
+
+.text-graph {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+    text-align: justify;
+}
+
+/* Estilo para el canvas */
+.canvas-graph {
+    width: 100% !important;
+    height: auto !important;
+    max-height: 400px;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .content_graph {
+        padding: 1.5rem;
+    }
+
+    .text-graph {
+        font-size: 0.95rem;
+    }
+
+    .canvas-graph {
+        max-height: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .text-graph {
+        font-size: 0.9rem;
+    }
+
+    .canvas-graph {
+        max-height: 250px;
+    }
+}
+
+
+/* Estilo base del footer */
+.foot {
+    background-color: #1c1c1e;
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    width: 100%;
+}
+
+/* Contenedor interior */
+.content-foot {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Línea divisoria */
+.content-foot hr {
+    border: none;
+    border-top: 1px solid #444;
+    margin-bottom: 15px;
+}
+
+/* Estilo de address */
+.address-foot {
+    font-style: normal;
+}
+
+/* Texto del footer */
+.text-foot {
+    font-size: 16px;
+    color: #ccc;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .text-foot {
+        font-size: 14px;
+        padding: 0 10px;
+    }
+
+    .content-foot {
+        padding: 0 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .text-foot {
+        font-size: 13px;
+        line-height: 1.5;
+    }
+}
