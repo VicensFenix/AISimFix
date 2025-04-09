@@ -5,12 +5,12 @@
     box-sizing: border-box;
     --bg-color-navbar: #0734a4;
     --link-color: #fff;
-    --link-color-after: #2ecc71;
+    --link-bg-action: #2ecc71;
     --color-maintitle: linear-gradient(to right, #3498db, #2ecc71);
-    --color-span-oganization: linear-gradient(to right, #3498db, #2ecc71);
     --textshadow-maintitle: 0 0 10px rgba(46, 204, 113, 0.3);
     --bg-color-foot: #1c1c1e;
-    --line-color: #ddd;
+    --family-letter-navtitle: 'Montserrat', sans-serif;
+    --famlily-letter-linknav: 'Poppins', sans-serif;
 }
 
 html, body {
@@ -67,6 +67,7 @@ html, body {
     font-size: 1.6rem;
     margin: 0;
     font-weight: 600;
+    font-family: var(--family-letter-navtitle);
     background: var(--color-maintitle);
     -webkit-background-clip: text;
     background-clip: text;
@@ -113,6 +114,7 @@ html, body {
 
 .link-nav {
     color: var(--link-color);
+    font-family: var(--famlily-letter-linknav);
     text-decoration: none;
     font-weight: 500;
     padding: 0.5rem 0;
@@ -128,12 +130,12 @@ html, body {
     left: 0;
     width: 0;
     height: 2px;
-    background-color: #2ecc71;
+    background-color: var(--link-bg-action);
     transition: width 0.3s;
 }
 
 .link-nav:hover {
-    color: #2ecc71;
+    color: var(--link-bg-action);
 }
 
 .link-nav:hover::after {
