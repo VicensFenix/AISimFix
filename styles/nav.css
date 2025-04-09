@@ -1,0 +1,229 @@
+/* ESTILOS GENERALES DE LA WEB */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    --bg-color-navbar: #0734a4;
+    --link-color: #fff;
+    --link-color-after: #2ecc71;
+    --color-maintitle: linear-gradient(to right, #3498db, #2ecc71);
+    --color-span-oganization: linear-gradient(to right, #3498db, #2ecc71);
+    --textshadow-maintitle: 0 0 10px rgba(46, 204, 113, 0.3);
+    --bg-color-foot: #1c1c1e;
+    --line-color: #ddd;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Sección del Navbar */
+
+/* ===== ESTILOS GENERALES ===== */
+.navbar {
+    background-color: var(--bg-color-navbar);
+    color: var(--link-color);
+    padding: 0.8rem 0; /* Padding vertical solamente */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0; /* Aseguramos que empiece desde el borde */
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Contenedor principal - clave para el centrado */
+.content-menu {
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto; /* Centrado pero sin espacios laterales */
+    padding: 0 1rem; /* Padding interno horizontal */
+    gap: 1.5rem;
+}
+
+/* ===== GRUPO LOGO + TÍTULO ===== */
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-right: auto; /* Empuja el menú a la derecha */
+}
+
+.logo-nav {
+    height: 42px;
+    width: auto;
+    transition: transform 0.3s;
+}
+
+.logo-nav:hover {
+    transform: scale(1.05);
+}
+
+.maintitle {
+    font-size: 1.6rem;
+    margin: 0;
+    font-weight: 600;
+    background: var(--color-maintitle);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    transition: all 0.3s;
+}
+
+.maintitle:hover {
+    text-shadow: var(--textshadow-maintitle);
+}
+
+/* ===== BOTÓN HAMBURGUESA ===== */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--link-color);
+    font-size: 1.8rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    transition: transform 0.3s;
+}
+
+.menu-toggle:hover {
+    transform: scale(1.1);
+}
+
+.icon-close {
+    display: none;
+}
+
+/* ===== MENÚ DE NAVEGACIÓN ===== */
+.container-nav {
+    display: flex;
+}
+
+.list-nav {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 1.8rem;
+}
+
+.link-nav {
+    color: var(--link-color);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 0;
+    position: relative;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+.link-nav::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #2ecc71;
+    transition: width 0.3s;
+}
+
+.link-nav:hover {
+    color: #2ecc71;
+}
+
+.link-nav:hover::after {
+    width: 100%;
+}
+
+/* ===== RESPONSIVE (MENÚ HAMBURGUESA) ===== */
+@media (max-width: 768px) {
+    .content-menu {
+        flex-wrap: wrap;
+        gap: 1rem;
+        padding: 0.5rem 0;
+    }
+    
+    .menu-toggle {
+        display: block;
+        order: -1;
+        margin-right: 0.5rem;
+    }
+    
+    .navbar-brand {
+        order: 1;
+        flex: 1;
+        min-width: 0;
+    }
+    
+    .maintitle {
+        font-size: 1.4rem;
+    }
+    
+    .logo-nav {
+        height: 36px;
+    }
+    
+    .container-nav {
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease-out;
+        order: 3;
+    }
+    
+    .container-nav.active {
+        max-height: 500px;
+    }
+    
+    .list-nav {
+        flex-direction: column;
+        gap: 0;
+        padding: 1rem 0 0.5rem;
+    }
+    
+    .item-nav {
+        padding: 0.8rem 1rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .link-nav {
+        font-size: 1.05rem;
+    }
+    
+    /* Efectos para el botón hamburguesa */
+    .menu-toggle.active .icon-menu {
+        display: none;
+    }
+    
+    .menu-toggle.active .icon-close {
+        display: inline;
+    }
+    
+    .menu-toggle:not(.active) .icon-close {
+        display: none;
+    }
+}
+
+/* ===== AJUSTES PARA PANTALLAS MUY PEQUEÑAS ===== */
+@media (max-width: 480px) {
+    .navbar {
+        padding: 0.6rem 0.8rem;
+    }
+    
+    .maintitle {
+        font-size: 1.2rem;
+    }
+    
+    .logo-nav {
+        height: 32px;
+    }
+    
+    .menu-toggle {
+        font-size: 1.6rem;
+    }
+}
