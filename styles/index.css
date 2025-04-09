@@ -17,15 +17,13 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
-    display: flex;
-    flex-direction: column;
 }
 
-/* Contenedor del principál */
 .main {
     padding-top: 120px;
-    flex: 1;
+    min-height: calc(100vh - 150px); /
 }
+
 
 /* Sección del Navbar */
 
@@ -605,10 +603,9 @@ html, body {
 /* Estilo base del footer */
 .foot {
     background-color: var(--bg-color-foot);
-    color: #ffffff;
+    color: white;
     padding: 20px 0;
     text-align: center;
-    font-family: 'Arial', sans-serif;
     width: 100%;
 }
 
@@ -639,7 +636,7 @@ html, body {
 
 /* Texto resaltado del footer */
 .span-foot {
-    color: var(linear-gradient(to right, #3498db, #2ecc71));
+    color: var(--linear-gradient-to-right);
 }
 
 /* Responsive */
