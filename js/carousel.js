@@ -1,4 +1,4 @@
-
+// Manipula el DOM con envento enlistando
 document.addEventListener('DOMContentLoaded', () => {
     const track = document.querySelector('.carousel-track');
     const cards = Array.from(track.children);
@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let currentIndex = 0;
 
+    //Función que actualiza el carrusel
     function updateCarousel() {
         const slideWidth = cards[0].getBoundingClientRect().width;
         track.style.transform = `translateX(-${slideWidth * currentIndex}px)`;
