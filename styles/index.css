@@ -3,14 +3,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    --bg-color-navbar: #0734a4;
-    --link-color: #fff;
-    --link-color-after: #2ecc71;
-    --color-maintitle: linear-gradient(to right, #3498db, #2ecc71);
-    --color-span-oganization: linear-gradient(to right, #3498db, #2ecc71);
-    --textshadow-maintitle: 0 0 10px rgba(46, 204, 113, 0.3);
-    --bg-color-foot: #1c1c1e;
-    --line-color: #ddd;
+    --bg-main: #f8f9fa;
+    --bg-section-start: #f8f9fa;
+    --color-subtitle: #222;
+    --family-letter-subtitle: 'Fira Code', monospace;
 }
 
 html, body {
@@ -20,16 +16,16 @@ html, body {
 }
 
 .main {
-    padding-top: 120px;
-    min-height: calc(100vh - 150px); /
+    padding-top: 90px;
+    min-height: calc(100vh - 150px);
+    background: var(--bg-main);
 }
 
 
 /* Sección de Inicio */
 .section-start {
     padding: 2rem 0;
-    background-color: #f8f9fa;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(#f8f9fa);
 }
 
 .container_start {
@@ -39,11 +35,12 @@ html, body {
 }
 
 .subtitle {
+    font-family: var(--family-letter-subtitle);
     text-align: center;
-    font-size: 2rem;
+    font-size: 2.5rem;
     margin-bottom: 40px;
-    color: #333;
-    font-weight: bold;
+    color: var(--color-subtitle);
+    text-shadow: 1px 3px 2px solid blue;
 }
 
 /* Estilos del carrusel - Tamaño base (móvil) */
