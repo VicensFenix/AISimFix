@@ -5,8 +5,20 @@
     box-sizing: border-box;
     --bg-main: #f8f9fa;
     --bg-section-start: #f8f9fa;
+    --bg-section-article: #f8f9fa;
+    --bg-section-graph: #f8f9fa;
+    --bd-card: white;
+    --bg-btn: rgba(0, 0, 0, 0.5);
+    --bg-btn-action: rgba(0, 0, 0, 0.8);
     --color-subtitle: #222;
+    --color-text: #111;
+    --color-btn: blue;
+    --color-mintitle:#005f99;
+    --color-btn-action: #fff;
     --family-letter-subtitle: 'Fira Code', monospace;
+    --family-letter-text: 'Inter', sans-serif;
+    --family-letter-mintitle: 'Poppins', sans-serif;
+
 }
 
 html, body {
@@ -40,7 +52,7 @@ html, body {
     font-size: 2.5rem;
     margin-bottom: 40px;
     color: var(--color-subtitle);
-    text-shadow: 1px 3px 2px solid blue;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 /* Estilos del carrusel - Tamaño base (móvil) */
@@ -58,7 +70,8 @@ html, body {
 
 .content_card {
     min-width: 100%; /* Ocupa todo el ancho del carrusel */
-    background: white;
+    font-family: var(--family-letter-text);
+    background: var(--bd-card);
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
@@ -77,8 +90,9 @@ html, body {
 .text_card {
     padding: 1rem;
     text-align: center;
-    color: #333;
-    font-size: 1.1rem;
+    color: var(--color-text);
+    font-family: var(--family-letter-text);
+    font-size: 1.2rem;
     margin: 0;
     flex-grow: 1;
     display: flex;
@@ -86,36 +100,13 @@ html, body {
     justify-content: center;
 }
 
-.action-buttons {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    padding: 0 1rem 1rem;
-}
-
-.action-buttons a {
-    display: inline-block;
-    padding: 0.5rem 1rem;
-    background-color: #007bff;
-    color: white;
-    text-decoration: none;
-    border-radius: 4px;
-    font-weight: 500;
-    text-align: center;
-    transition: background-color 0.3s;
-}
-
-.action-buttons a:hover {
-    background-color: #0056b3;
-}
-
 /* Botones del carrusel */
 .btn_action {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
+    background-color: var(--bg-btn);
+    color: var(--color-btn);
     border: none;
     border-radius: 50%;
     width: 40px;
@@ -130,7 +121,8 @@ html, body {
 }
 
 .btn_action:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: var(--bg-btn-action);
+    color: var(--color-btn-action);
 }
 
 .left {
@@ -155,11 +147,6 @@ html, body {
         font-size: 1.2rem; /* Aumenta el tamaño del texto */
         padding: 1.5rem; /* Más padding */
     }
-    
-    .action-buttons a {
-        padding: 0.6rem 1.2rem; /* Botones más grandes */
-        font-size: 1.1rem;
-    }
 }
 
 /* Media Queries para pantallas grandes (desktop) */
@@ -175,15 +162,6 @@ html, body {
     .text_card {
         font-size: 1.3rem; /* Texto aún más grande */
         padding: 2rem; /* Más padding */
-    }
-    
-    .action-buttons {
-        padding: 0 1.5rem 1.5rem; /* Más espacio alrededor de los botones */
-    }
-    
-    .action-buttons a {
-        padding: 0.7rem 1.5rem;
-        font-size: 1.2rem;
     }
 }
 
@@ -204,7 +182,7 @@ html, body {
 /* Sección del artículo */
 .article {
     padding: 50px 20px;
-    background-color: #f9f9f9;
+    background-color: var(--bg-section-article);
 }
 
 /* Contenedor general */
@@ -215,7 +193,7 @@ html, body {
 }
 
 .card-article {
-    background-color: #fff;
+    background-color: var(--bd-card);
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     padding: 30px;
@@ -234,8 +212,10 @@ html, body {
 
 /* Título dentro de cada card */
 .mintitle {
-    font-size: 1.5rem;
-    color: #005f99;
+    font-size: 1.8rem;
+    color: var(--color-mintitle);
+    font-family: var(--family-letter-mintitle);
+    text-transform: uppercase;
     margin-bottom: 15px;
 }
 
@@ -261,7 +241,8 @@ html, body {
 /* Texto de cada card */
 .text-article {
     font-size: 1rem;
-    color: #555;
+    color: var(--color-text);
+    font-family: var(--family-letter-text);
     line-height: 1.6;
     text-align: justify;
 }
@@ -324,7 +305,7 @@ html, body {
 /* Estilo base para la sección de la gráfica */
 .section-graph {
     padding: 3rem 1rem;
-    background-color: #f9f9f9;
+    background-color: var(--bg-section-graph);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -334,7 +315,7 @@ html, body {
 .content_graph {
     max-width: 900px;
     width: 100%;
-    background-color: #ffffff;
+    background-color: var(--bd-card);
     border-radius: 16px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 2rem;
@@ -347,9 +328,9 @@ html, body {
 }
 
 .text-graph {
-    font-size: 1rem;
+    font-size: 1.2rem;
     line-height: 1.6;
-    color: #555;
+    color: var(--color-text);
     text-align: justify;
 }
 
