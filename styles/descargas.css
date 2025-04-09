@@ -1,126 +1,219 @@
-/* ESTILOS GENERALES DE LA WEB */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    --bg-color-navbar: #0734a4;
-    --link-color: #fff;
-    --link-color-after: #2ecc71;
-    --color-maintitle: linear-gradient(to right, #3498db, #2ecc71);
-    --color-span-oganization: linear-gradient(to right, #3498db, #2ecc71);
-    --textshadow-maintitle: 0 0 10px rgba(46, 204, 113, 0.3);
-    --bg-color-foot: #1c1c1e;
-    --line-color: #ddd;
-}
-
-html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-}
-
-
-/* Estilos generales de la sección */
-.section_information {
-    padding: 60px 20px;
-    background-color: #f8f9fa;
-    font-family: 'Arial', sans-serif;
-}
-
-.content_information {
+/* Estilos generales */
+:root {
+    --primary-color: #4285f4;
+    --secondary-color: #34a853;
+    --accent-color: #fbbc05;
+    --text-color: #3c4043;
+    --light-bg: #f8f9fa;
+    --card-shadow: 0 1px 2px 0 rgba(60,64,67,0.3), 0 2px 6px 2px rgba(60,64,67,0.15);
+  }
+  
+  body {
+    font-family: 'Roboto', 'Segoe UI', sans-serif;
+    color: var(--text-color);
+    line-height: 1.6;
+  }
+  
+  /* Sección de información */
+  .section_information {
+    padding: 4rem 1.5rem;
+    background-color: var(--light-bg);
+  }
+  
+  .content_information {
     max-width: 1200px;
     margin: 0 auto;
-}
-
-.sub-title {
+  }
+  
+  .sub-title {
     font-size: 2rem;
-    color: #2c3e50;
-    margin-bottom: 30px;
+    font-weight: 500;
+    color: var(--primary-color);
+    margin-bottom: 2.5rem;
     text-align: center;
-    font-weight: 700;
-}
-
-.text_information {
+    position: relative;
+  }
+  
+  .sub-title::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 3px;
+    background: var(--accent-color);
+    margin: 0.8rem auto;
+  }
+  
+  .text_information {
     font-size: 1.1rem;
-    line-height: 1.6;
-    color: #34495e;
-    margin-bottom: 20px;
-}
-
-/* Feature box */
-.feature-box_information {
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Feature box */
+  .feature-box_information {
     background-color: white;
-    padding: 25px;
+    padding: 2rem;
     border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin-bottom: 40px;
+    box-shadow: var(--card-shadow);
+    margin-bottom: 3rem;
     text-align: center;
-}
-
-/* Beneficios */
-.benefits_information {
+    border-left: 4px solid var(--primary-color);
+  }
+  
+  /* Beneficios - estilo de cards */
+  .benefits_information {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 25px;
-    margin-top: 30px;
-}
-
-.benefit-card_information, .benefit-card {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+  
+  .benefit-card_information, .benefit-card {
     background-color: white;
-    padding: 25px;
+    padding: 1.8rem;
     border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--card-shadow);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.benefit-card_information:hover, .benefit-card:hover {
+    border-top: 3px solid var(--secondary-color);
+  }
+  
+  .benefit-card_information:hover, .benefit-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-}
-
-.min-subtitle {
-    font-size: 1.3rem;
-    color: #2c3e50;
-    margin-bottom: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .min-subtitle {
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: var(--text-color);
+    margin-bottom: 1rem;
     display: flex;
     align-items: center;
-    gap: 10px;
-}
-
-.icon {
+    gap: 0.8rem;
+  }
+  
+  .icon {
     font-size: 1.5rem;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    .sub-title {
-        font-size: 1.7rem;
+  }
+  
+  /* Sección de aprendizaje (simulador) */
+  .section_learn {
+    padding: 4rem 1.5rem;
+    background-color: white;
+  }
+  
+  .content_learn {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Pasos - estilo de cards */
+  .step {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: var(--card-shadow);
+    margin-bottom: 2rem;
+    position: relative;
+    overflow: hidden;
+    border-left: 4px solid var(--primary-color);
+  }
+  
+  .step-number {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: var(--primary-color);
+    color: white;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    border-bottom-left-radius: 8px;
+  }
+  
+  .strong_step {
+    font-weight: 500;
+    color: var(--primary-color);
+    display: block;
+    margin-bottom: 0.8rem;
+    font-size: 1.1rem;
+  }
+  
+  .text_step {
+    margin-bottom: 1rem;
+  }
+  
+  .list_step {
+    padding-left: 1.2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .item_step {
+    margin-bottom: 0.5rem;
+    position: relative;
+  }
+  
+  .item_step::before {
+    content: "•";
+    color: var(--primary-color);
+    font-weight: bold;
+    display: inline-block; 
+    width: 1em;
+    margin-left: -1em;
+  }
+  
+  /* Tips - estilo de card especial */
+  .tips {
+    background-color: #f1f8fe;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: var(--card-shadow);
+    border-left: 4px solid var(--accent-color);
+    margin-top: 2rem;
+  }
+  
+  .tips .min-subtitle {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .section_information, .section_learn {
+      padding: 3rem 1.2rem;
     }
     
-    .text_information {
-        font-size: 1rem;
+    .sub-title {
+      font-size: 1.7rem;
+    }
+    
+    .feature-box_information, .benefit-card_information, 
+    .benefit-card, .step, .tips {
+      padding: 1.5rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .section_information, .section_learn {
+      padding: 2rem 1rem;
+    }
+    
+    .sub-title {
+      font-size: 1.5rem;
     }
     
     .min-subtitle {
-        font-size: 1.1rem;
+      font-size: 1.1rem;
+    }
+    
+    .text_information, .text_step {
+      font-size: 1rem;
     }
     
     .benefits_information {
-        grid-template-columns: 1fr;
+      grid-template-columns: 1fr;
     }
-}
-
-@media (max-width: 480px) {
-    .section_information {
-        padding: 40px 15px;
-    }
-    
-    .sub-title {
-        font-size: 1.5rem;
-        margin-bottom: 20px;
-    }
-    
-    .feature-box_information, .benefit-card_information, .benefit-card {
-        padding: 20px;
-    }
-}
+  }
