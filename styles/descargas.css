@@ -1,0 +1,20 @@
+/* ESTILOS GENERALES DE LA WEB */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    --bg-color-navbar: #0734a4;
+    --link-color: #fff;
+    --link-color-after: #2ecc71;
+    --color-maintitle: linear-gradient(to right, #3498db, #2ecc71);
+    --color-span-oganization: linear-gradient(to right, #3498db, #2ecc71);
+    --textshadow-maintitle: 0 0 10px rgba(46, 204, 113, 0.3);
+    --bg-color-foot: #1c1c1e;
+    --line-color: #ddd;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
