@@ -3,14 +3,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    --bg-color-navbar: #0734a4;
-    --link-color: #fff;
-    --link-color-after: #2ecc71;
-    --color-maintitle: linear-gradient(to right, #3498db, #2ecc71);
-    --color-span-oganization: linear-gradient(to right, #3498db, #2ecc71);
-    --textshadow-maintitle: 0 0 10px rgba(46, 204, 113, 0.3);
+    --color-text-foot: #ccc;
+    --color-textspan-foot: #12cfa9;
     --bg-color-foot: #1c1c1e;
     --line-color: #ddd;
+    --fontfamily-textfoot: 'Fira Code', monospace;
 }
 
 html, body {
@@ -45,18 +42,19 @@ html, body {
 
 /* Estilo de address */
 .address-foot {
-    font-style: normal;
+    font-style: oblique;
 }
 
 /* Texto del footer */
 .text-foot {
-    font-size: 16px;
-    color: #ccc;
+    font-family: var(--fontfamily-textfoot);
+    font-size: 20px;
+    color: var(--color-text-foot);
 }
 
 /* Texto resaltado del footer */
 .span-foot {
-    color: var(--linear-gradient-to-right);
+    color: var(--color-textspan-foot);
 }
 
 /* Responsive */
