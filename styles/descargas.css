@@ -18,3 +18,109 @@ html, body {
     margin: 0;
     padding: 0;
 }
+
+
+/* Estilos generales de la sección */
+.section_information {
+    padding: 60px 20px;
+    background-color: #f8f9fa;
+    font-family: 'Arial', sans-serif;
+}
+
+.content_information {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.sub-title {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 30px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.text_information {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #34495e;
+    margin-bottom: 20px;
+}
+
+/* Feature box */
+.feature-box_information {
+    background-color: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+/* Beneficios */
+.benefits_information {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.benefit-card_information, .benefit-card {
+    background-color: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.benefit-card_information:hover, .benefit-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.min-subtitle {
+    font-size: 1.3rem;
+    color: #2c3e50;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.icon {
+    font-size: 1.5rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .sub-title {
+        font-size: 1.7rem;
+    }
+    
+    .text_information {
+        font-size: 1rem;
+    }
+    
+    .min-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .benefits_information {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .section_information {
+        padding: 40px 15px;
+    }
+    
+    .sub-title {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
+    
+    .feature-box_information, .benefit-card_information, .benefit-card {
+        padding: 20px;
+    }
+}
