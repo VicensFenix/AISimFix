@@ -10,8 +10,8 @@
     --bd-card: white;
     --bg-btn: rgba(0, 0, 0, 0.5);
     --bg-btn-action: rgba(0, 0, 0, 0.8);
-    --color-subtitle: #222;
-    --color-text: #111;
+    --color-subtitle: #000;
+    --color-text: #222;
     --color-btn: blue;
     --color-mintitle:#005f99;
     --color-btn-action: #fff;
@@ -48,11 +48,11 @@ html, body {
 
 .subtitle {
     font-family: var(--family-letter-subtitle);
+    text-transform: uppercase;
     text-align: center;
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin-bottom: 40px;
     color: var(--color-subtitle);
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 /* Estilos del carrusel - Tamaño base (móvil) */

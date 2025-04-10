@@ -1,34 +1,45 @@
 /* Estilos generales */
 :root {
-    --primary-color: #4285f4;
-    --secondary-color: #34a853;
-    --accent-color: #fbbc05;
-    --text-color: #3c4043;
-    --light-bg: #f8f9fa;
+    --cardline-color: #12cfa9;
+    --accent-color: #4285f4;
+    --alarm-color: rgb(230, 230, 15);
+    --stepnumber-color: #26eb5e;
+    --text-color: #222;
+    --subtitle-color: #000;
+    --mintitle-color: #0734a4;
+    --strong_step-color: #0734a4;
+    --bg-section-information: #f8f9fa;
+    --bg-section-learn: #f8f9fa;
+    --bg-card: white;
     --card-shadow: 0 1px 2px 0 rgba(60,64,67,0.3), 0 2px 6px 2px rgba(60,64,67,0.15);
+    --family-letter-subtitle: 'Fira Code', monospace;
+    --family-letter-text: 'Inter', sans-serif;
+    --family-letter-mintitle: 'Poppins', sans-serif;
+    --family-step-number: 'Montserrat', sans-serif;
   }
   
   body {
-    font-family: 'Roboto', 'Segoe UI', sans-serif;
-    color: var(--text-color);
     line-height: 1.6;
   }
   
   /* Sección de información */
   .section_information {
     padding: 4rem 1.5rem;
-    background-color: var(--light-bg);
+    background-color: var(--bg-section-information);
   }
   
   .content_information {
+    padding-top: 90px;
     max-width: 1200px;
     margin: 0 auto;
   }
   
   .sub-title {
+    font-family: var(--family-letter-subtitle);
+    text-transform: uppercase;
     font-size: 2rem;
     font-weight: 500;
-    color: var(--primary-color);
+    color: var(--subtitle-color);
     margin-bottom: 2.5rem;
     text-align: center;
     position: relative;
@@ -44,20 +55,22 @@
   }
   
   .text_information {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
+    font-family: var(--family-letter-text);
+    text-align: justify;
     color: var(--text-color);
     margin-bottom: 1.5rem;
   }
   
   /* Feature box */
   .feature-box_information {
-    background-color: white;
+    background-color: var(--bg-card);
     padding: 2rem;
     border-radius: 8px;
     box-shadow: var(--card-shadow);
     margin-bottom: 3rem;
     text-align: center;
-    border-left: 4px solid var(--primary-color);
+    border-left: 4px solid var(--cardline-color);
   }
   
   /* Beneficios - estilo de cards */
@@ -69,12 +82,12 @@
   }
   
   .benefit-card_information, .benefit-card {
-    background-color: white;
+    background-color: var(--bg-card);
     padding: 1.8rem;
     border-radius: 8px;
     box-shadow: var(--card-shadow);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border-top: 3px solid var(--secondary-color);
+    border-top: 3px solid var(--cardline-color);
   }
   
   .benefit-card_information:hover, .benefit-card:hover {
@@ -83,9 +96,11 @@
   }
   
   .min-subtitle {
-    font-size: 1.25rem;
+    font-size: 1.4rem;
     font-weight: 500;
-    color: var(--text-color);
+    color: var(--mintitle-color);
+    font-family: var(--family-letter-mintitle);
+    text-align: left;
     margin-bottom: 1rem;
     display: flex;
     align-items: center;
@@ -100,32 +115,39 @@
 /* Sección de aprendizaje (simulador) */
   .section_learn {
     padding: 4rem 1.5rem;
-    background-color: white;
+    background-color: var(--bg-section-learn);
   }
   
   .content_learn {
     max-width: 1200px;
     margin: 0 auto;
   }
+
+  .the_line {
+    border: none;
+    border-top: 1px solid var(--line-color);
+    margin-bottom: 15px;
+}
   
   /* Pasos - estilo de cards */
   .step {
-    background-color: white;
+    background-color: var(--bg-card);
     padding: 2rem;
     border-radius: 8px;
     box-shadow: var(--card-shadow);
     margin-bottom: 2rem;
     position: relative;
     overflow: hidden;
-    border-left: 4px solid var(--primary-color);
+    border-left: 4px solid var(--cardline-color);
   }
   
   .step-number {
+    font-family: var(--family-step-number);
     position: absolute;
     top: 0;
     right: 0;
-    background-color: var(--primary-color);
-    color: white;
+    background-color: var(--accent-color);
+    color: var(--stepnumber-color);
     width: 40px;
     height: 40px;
     display: flex;
@@ -136,15 +158,20 @@
   }
   
   .strong_step {
+    font-family: var(--family-letter-mintitle);
     font-weight: 500;
-    color: var(--primary-color);
+    color: var(--strong_step-color);
+    text-transform: uppercase;
     display: block;
     margin-bottom: 0.8rem;
     font-size: 1.1rem;
   }
   
   .text_step {
+    font-family: var(--family-letter-text);
+    color: var(--text-color);
     margin-bottom: 1rem;
+    text-align: left;
   }
   
   .list_step {
@@ -155,29 +182,23 @@
   .item_step {
     margin-bottom: 0.5rem;
     position: relative;
+    color: var(--text-color);
+    font-family: var(--family-letter-text);
   }
   
-  .item_step::before {
-    content: "•";
-    color: var(--primary-color);
-    font-weight: bold;
-    display: inline-block; 
-    width: 1em;
-    margin-left: -1em;
-  }
   
   /* Tips - estilo de card especial */
   .tips {
-    background-color: #f1f8fe;
+    background-color: var(--bg-card);
     padding: 2rem;
     border-radius: 8px;
     box-shadow: var(--card-shadow);
-    border-left: 4px solid var(--accent-color);
+    border-left: 4px solid var(--alarm-color);
     margin-top: 2rem;
   }
   
   .tips .min-subtitle {
-    color: var(--primary-color);
+    color: var(--mintitle-color);
     margin-bottom: 1.5rem;
   }
   
