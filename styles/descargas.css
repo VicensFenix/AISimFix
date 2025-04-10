@@ -8,14 +8,19 @@
     --subtitle-color: #000;
     --mintitle-color: #0734a4;
     --strong_step-color: #0734a4;
+    --header-letter-color: #fff;
     --bg-section-information: #f8f9fa;
     --bg-section-learn: #f8f9fa;
+    --bg-section-down: #f8f8fa;
     --bg-card: white;
+    --bg-table: #fff;
+    --bg-header-table: #2162a3;
     --card-shadow: 0 1px 2px 0 rgba(60,64,67,0.3), 0 2px 6px 2px rgba(60,64,67,0.15);
     --family-letter-subtitle: 'Fira Code', monospace;
     --family-letter-text: 'Inter', sans-serif;
     --family-letter-mintitle: 'Poppins', sans-serif;
     --family-step-number: 'Montserrat', sans-serif;
+    --family-letter-titleheader-table: 'Roboto Mono', monospace;
   }
   
   body {
@@ -244,8 +249,7 @@
 /* Estilos generales de la sección */
 .section-download {
     padding: 2rem 1rem;
-    background-color: #f8f9fa;
-    font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+    background-color: var(--bg-section-down);
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -254,7 +258,7 @@
 .table-download {
     width: 100%;
     border-collapse: collapse;
-    background-color: white;
+    background-color: var(--bg-table);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
     border-radius: 8px;
     overflow: hidden;
@@ -262,8 +266,9 @@
 
 /* Estilos para el encabezado de la tabla */
 .heeadtable {
-    background-color: #2c3e50;
-    color: white;
+    background-color: var(--bg-header-table);
+    color: var(--header-letter-color);
+    font-family: var(--family-letter-titleheader-table);
 }
 
 .trtable {
@@ -291,7 +296,7 @@
 .tdtable {
     padding: 1rem 1rem;
     border-bottom: 1px solid #e0e0e0;
-    color: #333;
+    color: var(--text-color);
     font-size: 0.95rem;
 }
 
